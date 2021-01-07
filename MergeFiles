@@ -1,0 +1,1 @@
+Get-ChildItem | ? {$_.PSIsContainer} | Get-ChildItem |  %{Get-Content $_.FullName -encoding utf8} | ? {$_ -Match "xxxxx"} > merge.txt
